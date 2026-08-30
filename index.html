@@ -301,7 +301,88 @@
       .skill-grid{ grid-template-columns:1fr 1fr; }
       .services-grid{ grid-template-columns:1fr; }
     }
-  </style>
+  
+    .project-visual.azviron .azviron-logo{
+      position:absolute;
+      top:24px;
+      left:50%;
+      transform:translateX(-50%);
+      width:220px;
+      height:150px;
+      object-fit:contain;
+      background:#fff;
+      border-radius:12px;
+      padding:8px;
+      z-index:1;
+    }
+    .project-visual.azviron span,
+    .project-visual.azviron strong,
+    .project-visual.azviron small{
+      position:relative;
+      z-index:2;
+    }
+  
+    .certificate-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+    .certificate-card{
+      background:var(--bg-elev);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:24px;
+      transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .certificate-card:hover{
+      transform:translateY(-6px);
+      border-color:var(--purple);
+      box-shadow:var(--shadow);
+    }
+    .certificate-card span{
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--purple);
+    }
+    .certificate-card h3{
+      font-size:16px;
+      margin:10px 0 7px;
+      line-height:1.45;
+    }
+    .certificate-card p{
+      font-size:12.5px;
+      color:var(--text-muted);
+      line-height:1.55;
+    }
+    @media (max-width:560px){
+      .certificate-grid{grid-template-columns:1fr;}
+    }
+  
+/* Azviron project logo positioning fix */
+.project-visual.azviron {
+  padding-top: 190px !important;
+}
+.project-visual.azviron .azviron-logo {
+  position: absolute !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 190px !important;
+  height: 135px !important;
+  object-fit: contain !important;
+  background: #fff !important;
+  border-radius: 12px !important;
+  padding: 8px !important;
+  z-index: 1 !important;
+}
+.project-visual.azviron span,
+.project-visual.azviron strong,
+.project-visual.azviron small {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+</style>
 </head>
 <body>
   <div class="progress" id="progress"></div>
@@ -420,7 +501,7 @@
       <div class="projects">
         <article class="project featured reveal tilt">
        <div class="project-visual eatsure">
-  <img src="eatsure-india-logo.jpeg" alt="EatSure India logo">
+  <img src="./Eatsure india app logo (2).jpeg" alt="EatSure India logo">
   <span>FOOD TECH</span>
   <strong>EatSure<br>India</strong>
   <small>Discover • Order • Enjoy</small>
@@ -435,7 +516,12 @@
         </article>
 
         <article class="project reveal tilt">
-          <div class="project-visual azviron"><span>TECHNOLOGY</span><strong>Azviron<br>Technologies</strong><small>Web + Android</small></div>
+          <div class="project-visual azviron">
+            <img src="./azvi.jpeg" alt="Azviron Technologies logo" class="azviron-logo">
+            <span>TECHNOLOGY</span>
+            <strong>Azviron<br>Technologies</strong>
+            <small>Web + Android</small>
+          </div>
           <div class="project-content">
             <div class="project-number">PROJECT_02</div><h3>Azviron Technologies</h3>
             <p>Technology company website with responsive design, plus a companion Android app with 25+ screens spanning auth, dashboard, services and an admin panel.</p>
@@ -465,7 +551,23 @@
 
     <section id="achievements" class="section">
       <div class="section-head reveal"><span>06</span><h2>Certifications &amp; Achievements</h2><div></div></div>
-      <div class="empty-state reveal"><span>+</span><h3>More milestones coming soon</h3><p>Certifications, hackathons and achievements will be added here as the journey grows.</p></div>
+
+      <div class="certificate-grid">
+        <article class="certificate-card reveal"><span>01</span><h3>Foundations of Prompt Engineering</h3><p>AWS Training and XK Certification</p></article>
+        <article class="certificate-card reveal"><span>02</span><h3>Certified Ethical Hacker (CEH)</h3><p>EC-Council</p></article>
+        <article class="certificate-card reveal"><span>03</span><h3>Build AI Automations That Work For You</h3><p>Certificate of Participation</p></article>
+        <article class="certificate-card reveal"><span>04</span><h3>Kaggle Community Member</h3><p>Kaggle</p></article>
+        <article class="certificate-card reveal"><span>05</span><h3>Dataset Creator</h3><p>Kaggle</p></article>
+        <article class="certificate-card reveal"><span>06</span><h3>Python Coder</h3><p>Kaggle</p></article>
+        <article class="certificate-card reveal"><span>07</span><h3>College Attendance Predictor in Java</h3><p>Certificate of Participation — SkillEcted Campus Program</p></article>
+        <article class="certificate-card reveal"><span>08</span><h3>Ethical Hacking Essentials (EHE)</h3><p>EC-Council • Coursera</p></article>
+        <article class="certificate-card reveal"><span>09</span><h3>Data Privacy Fundamentals</h3><p>DS0301EN — Cognitive Class / IBM Developer Skills Network</p></article>
+        <article class="certificate-card reveal"><span>10</span><h3>SQL and Relational Databases 101</h3><p>DB0101EN — IBM • Cognitive Class</p></article>
+        <article class="certificate-card reveal"><span>11</span><h3>Data Science 101</h3><p>DS0101EN — IBM • Cognitive Class</p></article>
+        <article class="certificate-card reveal"><span>12</span><h3>Artificial Intelligence Mastery</h3><p>Certificate of Completion</p></article>
+        <article class="certificate-card reveal"><span>13</span><h3>12 Weeks Internship — Data Analytics &amp; Machine Learning</h3><p>Torque n Tech</p></article>
+        <article class="certificate-card reveal"><span>14</span><h3>Web Development Course</h3><p>STP Computer Education • 12 months</p></article>
+      </div>
     </section>
 
     <section id="contact" class="section contact-section">
